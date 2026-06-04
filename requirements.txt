@@ -1,0 +1,22 @@
+# torch==1.10.1+cu113 -f https://download.pytorch.org/whl/torch_stable.html
+# torchvision==0.11.2+cu113 -f https://download.pytorch.org/whl/torch_stable.html
+mmcls==0.23.2
+mmcv-full==1.6.1
+# mmdet==2.25.1
+mmdet3d==1.0.0rc4
+mmsegmentation==0.28.0
+# nuscenes-devkit
+# motmetrics
+av2
+refile==0.4.1
+spconv-cu118==2.3.6
+flash-attn==1.0.2
+torch-scatter==2.1.2
+git+https://github.com/Abyssaledge/TorchEx.git 
+yapf==0.40.1
+setuptools==59.5.0
+fvcore
+numpy==1.23.5
+wandb
+ipdb
+open3d

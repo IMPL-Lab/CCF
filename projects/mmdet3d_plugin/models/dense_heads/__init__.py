@@ -1,0 +1,1 @@
+from .mv2dfusion_head_v2_decouple import MV2DFusionHeadV2Decouple

@@ -1,0 +1,16 @@
+[submodule "thirdparty/mmcv_torch2"]
+	path = thirdparty/mmcv_torch2
+	url = https://github.com/curiosity654/mmcv_torch2.git
+	branch = v1.7.0_torch_2
+[submodule "thirdparty/mmdetection_ccf"]
+	path = thirdparty/mmdetection_ccf
+	url = https://github.com/curiosity654/mmdetection_ccf.git
+	branch = mmdetection_ccf
+[submodule "thirdparty/mmdetection3d_ccf"]
+	path = thirdparty/mmdetection3d_ccf
+	url = https://github.com/curiosity654/mmdetection3d_ccf.git
+	branch = mmdetection3d_ccf
+[submodule "thirdparty/nuscenes-devkit_ccf"]
+	path = thirdparty/nuscenes-devkit_ccf
+	url = https://github.com/curiosity654/nuscenes-devkit_ccf.git
+	branch = main
