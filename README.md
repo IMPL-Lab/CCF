@@ -122,14 +122,21 @@ mkdir -p checkpoints/eval
 ln -sf ../ccf_source.pth checkpoints/eval/ccf_source.pth
 ```
 
-The training configs expect two checkpoints:
+The source-domain training configs expect two initialization checkpoints:
 
 ```text
 checkpoints/isfusion_source.pth
 checkpoints/faster_rcnn_swint_fpn_source.pth
 ```
 
-Both checkpoints are trained on the nuScenes source split. `faster_rcnn_swint_fpn_source.pth` is trained on 2D boxes obtained by projecting nuScenes 3D boxes from the source split onto images.
+Both source initialization checkpoints are trained on the nuScenes source split. `faster_rcnn_swint_fpn_source.pth` is trained on 2D boxes obtained by projecting nuScenes 3D boxes from the source split onto images.
+
+The oracle training config expects the corresponding full-train initialization checkpoints:
+
+```text
+checkpoints/isfusion_oracle.pth
+checkpoints/faster_rcnn_swint_fpn_oracle.pth
+```
 
 Split evaluation expects:
 
@@ -150,6 +157,14 @@ Train the source baseline:
 ```bash
 bash tools/dist_train.sh projects/configs/ccf/baseline_source.py 4
 ```
+
+Train the oracle model:
+
+```bash
+bash tools/dist_train.sh projects/configs/ccf/ccf_oracle.py 4
+```
+
+The oracle config trains on the full nuScenes train split and validates on the full nuScenes val split, so it is an upper-bound setting rather than the source-domain reproduction setup. It uses `depth_loss_type="silog"` for the image depth branch to improve training stability.
 
 ## Evaluation
 

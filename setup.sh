@@ -28,7 +28,9 @@ pip install -e .
 cd ../../
 
 # other dependencies
-pip install wandb ipdb einops
+pip install ipdb einops
+# Optional experiment tracking:
+# pip install wandb
 # Keep NumPy below 2.0 for this OpenMMLab stack. If pip resolves newer binary packages after installing the OpenMMLab submodules, pin the compatible wheels:
 pip install yapf==0.40.1 numpy==1.23.5 networkx==2.8.4 motmetrics
 pip install opencv-python==4.8.1.78 plyfile==1.1.3 huggingface_hub
